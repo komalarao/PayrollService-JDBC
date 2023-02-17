@@ -12,7 +12,6 @@ public class PayrollServiceJdbc {
 			Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/payrollservice", "root",
 					"root");
 			Statement statement = connect.createStatement();
-
 			if (statement != null) {
 				System.out.println("connection is successful:");
 			}
