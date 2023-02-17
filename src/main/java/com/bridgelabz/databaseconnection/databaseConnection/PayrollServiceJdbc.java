@@ -17,7 +17,8 @@ public class PayrollServiceJdbc {
 			if (statement != null) {
 				System.out.println("connection is successful:");
 			}
-			ResultSet output = statement.executeQuery("select * from employee_payroll where name = 'terissa' ;");
+			ResultSet output = statement.executeQuery("select * from employee_payroll WHERE start_date BETWEEN CAST('2020-04-15' AS DATE) AND DATE(NOW());");
+					  
 			
 			  while(output.next()) { System.out.print("id: "+output.getInt(1)+"\t");
 			  System.out.println("name: "+output.getString(2));
