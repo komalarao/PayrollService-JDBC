@@ -17,6 +17,23 @@ public class PayrollServiceJdbc {
 				System.out.println("connection is successful:");
 			}
 			ResultSet output = statement.executeQuery("select * from employee_payroll ;");
+			
+			  while(output.next()) { System.out.print("id: "+output.getInt(1)+"\t");
+			  System.out.println("name: "+output.getString(2));
+			  System.out.println("salary: "+output.getInt(3));
+			  System.out.println("date: "+output.getString(4));
+			  System.out.println("gender: "+output.getString(5));
+			  System.out.println("phone: "+output.getLong(6));
+			  System.out.println("address: "+output.getString(7));
+			  System.out.println("department: "+output.getString(8));
+			  System.out.println("basicPay: "+output.getInt(9));
+			  System.out.println("deductions: "+output.getInt(10));
+			  System.out.println("taxablePay: "+output.getInt(11));
+			  System.out.println("incometax: "+output.getInt(12));
+			  System.out.println("netpay: "+output.getInt(13)); 
+			  System.out.println(); 
+			  }
+			 
 
 		} catch (SQLException e) {
 			e.printStackTrace();
