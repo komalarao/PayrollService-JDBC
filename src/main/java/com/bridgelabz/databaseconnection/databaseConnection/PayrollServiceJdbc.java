@@ -12,6 +12,7 @@ public class PayrollServiceJdbc {
 			Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/payrollservice", "root",
 					"root");
 			Statement statement = connect.createStatement();
+			statement.execute("update employee_payroll set basic_pay=3000000 where name = 'terissa';");
 
 			if (statement != null) {
 				System.out.println("connection is successful:");
